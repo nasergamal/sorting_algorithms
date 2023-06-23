@@ -24,6 +24,8 @@ void cocktail_sort_list(listint_t **list)
 				tmp = ptr;
 			else
 			{
+				if (tmp->prev == NULL)
+					*list = ptr;
 				swap(ptr, tmp, 1);
 				print_list(*list), sort = 1; }
 			if (ptr->next == NULL)
