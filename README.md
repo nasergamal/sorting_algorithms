@@ -9,3 +9,9 @@
 |   100  | sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence       |
 |   101  | sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm           |
 |   102  | sorts an array of integers in ascending order using the Counting sort algorithm                              |
+|   103  | sorts an array of integers in ascending order using the Merge sort algorithm                                 |
+|   104  | sorts an array of integers in ascending order using the Heap sort algorithm                                  |
+|   105  | sorts an array of integers in ascending order using the LSD Radix sort algorithm                             |
+|   106  | sorts an array of integers in ascending order using the Bitonic sort algorithm                               |
+|   107  | sorts an array of integers in ascending order using the Quick sort algorithm, using Hoare partition scheme.  |
+|   1000 | sorts a deck of cards.                                                                                       |
