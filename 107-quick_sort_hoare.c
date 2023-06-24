@@ -14,7 +14,7 @@ void quick_sort_hoare(int *array, size_t size)
 {
 	if (!array || size < 2)
 		return;
-	qsh(array, 0, size, size);
+	qsh(array, 0, size - 1, size);
 }
 
 /**
