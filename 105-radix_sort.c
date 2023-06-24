@@ -24,7 +24,6 @@ void radix_sort(int *array, size_t size)
 	}
 	for (i = 1; max / i > 0; i *= 10)
 		count_sort(array, size, i);
-
 }
 
 /**
@@ -39,24 +38,18 @@ void count_sort(int *array, size_t size, int i)
 {
 	int n, m, max = (array[0] / i) % 10;
 	size_t j;
-	int *carray = NULL, *count = NULL;
+	int *carray = NULL, count[10];
 
 	carray = malloc(sizeof(int) * size);
 	if (carray == NULL)
-		return;
+		exit(1);
 	for (j = 0; j < size; j++)
 	{
 		carray[j] = array[j];
 		if (max < (array[j] / i) % 10)
 			max = array[j];
 	}
-	count = malloc(sizeof(int) * (max + 1));
-	if (count == NULL)
-	{
-		free(carray);
-		return;
-	}
-	for (n = 0; n <= max; n++)
+	for (n = 0; n < 10; n++)
 		count[n] = 0;
 	for (j = 0; j < size; j++)
 		count[(array[j] / i) % 10] += 1;
@@ -67,5 +60,6 @@ void count_sort(int *array, size_t size, int i)
 		array[count[(carray[m] / i) % 10] - 1] = carray[m];
 		count[(carray[m] / i) % 10] -= 1;
 	}
+	free(carray);
 	print_array(array, size);
 }
