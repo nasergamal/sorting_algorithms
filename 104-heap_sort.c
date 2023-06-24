@@ -22,10 +22,12 @@ void heap_sort(int *array, size_t size)
 	}
 	for (n = ((int)(size) - 1); n >= 0; n--)
 	{
-		tmp = array[n];
-		array[n] = array[0];
-		array[0] = tmp;
-		print_array(array, size);
+		if (n != 0)
+		{	tmp = array[n];
+			array[n] = array[0];
+			array[0] = tmp;
+			print_array(array, size);
+		}
 		heapify(array, size, n, 0);
 	}
 }
